@@ -1,1 +1,44 @@
-{{yield}}
+<h2>{{@title}}</h2>
+
+<table class="table downloadlist">
+  <thead>
+    <tr>
+      <th colspan="2" align="left">
+        <Input 
+            id="select-all"
+            @type="checkbox"
+            {{on "click" this.selectAllAvailable}}
+        />
+        <label id="select-all-label" for="select-all" class="input-label"></label>
+      </th>
+      <th colspan="3" align="left">
+        <button type="button" class="btn-download" {{on "click" this.download}}><i class="fas fa-download"></i>Download Selected</button>
+      </th>
+    </tr>
+    <tr>
+      <th>&nbsp;</th>
+      <th>Name</th>
+      <th>Device</th>
+      <th>Path</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each @items as |item|}}
+      <tr>
+        <td>
+          <CheckboxComponent
+              @item={{item}}
+              @status={{item.status}}
+          />
+        </td>
+        <td class="item-name">{{item.name}}</td>
+        <td class="item-device">{{item.device}}</td>
+        <td class="item-path">{{item.path}}</td>
+        <StatusCell
+          @status={{item.status}}
+        />
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

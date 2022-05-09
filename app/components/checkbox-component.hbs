@@ -1,0 +1,8 @@
+<Input
+  @type="checkbox"
+  @checked={{this.isChecked}}
+  disabled={{this.disabled}}
+  {{on "input" this.addToDownloads}}
+  class="select-item"
+  @value="{{this.itemPath}} | {{this.itemDevice}}"
+/>

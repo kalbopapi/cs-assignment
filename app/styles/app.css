@@ -1,0 +1,70 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300,300italic,400,700,700italic);
+
+/**
+ * Base Elements
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div,
+span,
+a,
+button {
+  font-family: 'Lato', 'Open Sans', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+}
+
+body {
+  background: #f3f3f3;
+}
+
+table {
+    border-collapse: separate;
+    margin: 1.5em auto;
+    width: 90%;
+    word-wrap: break-word;
+}
+
+table th {
+    border-top: 1px solid #969695;
+    border-bottom: 1px solid #969695;
+    padding: 5px;
+    text-align: left;
+    font-size: 1em;
+}
+
+table td {
+    border-top: 1px solid #969695;
+    border-bottom: 1px solid #969695;
+}
+
+i {
+    padding: 10px;
+}
+
+.item-status {
+    text-transform: capitalize;
+}
+
+.input-label {
+    padding-left: 0.5em;
+}
+
+.btn-download {
+    border: none;
+    padding: 12px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    margin: 5px;
+}
